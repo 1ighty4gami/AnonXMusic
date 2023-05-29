@@ -81,9 +81,7 @@ async def gen_thumb(videoid, user_id):
         f = Image.fromarray(e)
         x = f.resize((107, 107))
 
-      
         bg = Image.open(f"AnonX/assets/anonx.png")
-       
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(30))
         enhancer = ImageEnhance.Brightness(background)
